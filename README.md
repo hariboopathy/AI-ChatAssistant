@@ -22,6 +22,6 @@ This project is a chatbot assistant designed to help customers interact with CAR
 ## How It Works
 
 1. **User Input**: The user enters a message in the chatbot interface.
-2. **Message Handling**: The chatbot sends the message to the backend, where it's processed by Google's Generative AI model (Gemini 1.5 Pro).
+2. **Message Handling**: The chatbot sends the message to the backend, where it's processed by Google's Generative AI model (Gemini 1.5 flash).
 3. **Model Response**: The AI processes the input and generates an appropriate response based on the provided business information and FAQs.
 4. **Real-Time Interaction**: The chatbot responds with text-based answers, providing customers with relevant information in a conversational format.
