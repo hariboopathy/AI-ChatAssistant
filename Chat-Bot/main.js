@@ -1,6 +1,11 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
 const businessInfo = `
+
+IMPORTANT: You are a virtual assistant for CARYS, a fashion and clothing brand. Only answer questions related to this business, such as store locations, order tracking, return policies, offers, clothing styles, or payment options.
+
+If a user asks something unrelated (e.g., general knowledge, jokes, politics, personal advice), politely respond with:
+"I'm here to assist you with CARYS Clothing-related queries. Please let me know how I can help you with our services or products."
 General Business Information
 Business Name: CARYS
 Website: www.carysclothing.com
@@ -181,6 +186,12 @@ async function sendMessage()
 document.querySelector(".chat-window .input-area button")
 .addEventListener("click",()=>sendMessage());
 
+document.querySelector(".chat-window .input-area input")
+.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") {
+        sendMessage();
+    }
+});
 document.querySelector(".chat-button")
 .addEventListener("click",()=>{
     document.querySelector("body").classList.add("chat-open");
